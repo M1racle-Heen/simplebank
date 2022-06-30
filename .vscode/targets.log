@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jun 28 23:11:16 2022
+# Make data base, printed on Thu Jun 30 21:06:28 2022
 
 # Variables
 
@@ -25,7 +25,7 @@ VBOX_MSI_INSTALL_PATH = D:\VBox\
 # environment
 LOCALAPPDATA = C:\Users\Said\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-833ef402-e866-4c30-b6c9-91829721e93a-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-dfe0979f-0222-4954-b63f-1c438cda6c06-sock
 # environment
 VSCODE_CWD = C:\Users\Said\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -43,7 +43,7 @@ GOPATH = C:\Users\Said\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_824_PBSVVTKVIGAYDMWN
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_13852_ZUQIIMFRPOGTZLXA
 # environment
 VS160COMCOMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\
 # environment
@@ -61,8 +61,7 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\Said\App 
-Data\Roaming\Code\CachedData\30d9c6cd9483b2cc586687151bcbcd635f373630
+VSCODE_CODE_CACHE_PATH = C:\Users\Said\AppData\Roaming\Code\CachedData\30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
 LANG = C
 # default
@@ -106,7 +105,7 @@ PT8HOME = D:\Cisco Packet Tracer 8.1.1
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 824
+VSCODE_PID = 13852
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -161,8 +160,8 @@ USERNAME = Said
 COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # automatic
 ?F = $(notdir $?)
-# environmen 
-t
+# enviro 
+nment
 PROGRAMW6432 = C:\Program Files
 # environment
 PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
@@ -223,8 +222,7 @@ SESSIONNAME = Console
 # environment
 PROCESSOR_REVISION = 8e0c
 # environment
-PROCESSOR_IDENTIFIER =  
-Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
 # variable set hash-table stats:
 # Load=105/1024=10%, Rehash=0, Collisions=10/132=8%
 
@@ -234,9 +232,9 @@ Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/Said/simplebank, mtime 1656436276): 11 files, no impossibilities.
+# . (key c:/Users/Said/simplebank, mtime 1656581043): 13 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -255,7 +253,7 @@ migratedown:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 23:06:10
+#  Last modified 2022-06-30 15:28:18
 #  File has been updated.
 #  Successfully updated.
 
@@ -266,6 +264,14 @@ dropdb:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 8):
 	docker exec -it postgres14.4 dropdb simple_bank
+
+server:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 24):
+	go run main.go
 
 migrateup:
 #  Phony target (prerequisite of .PHONY).
@@ -291,7 +297,8 @@ all:
 test:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  File  
+does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 21):
 	go test -v -cover ./...
@@ -320,25 +327,25 @@ createdb:
 #  recipe to execute (from 'Makefile', line 5):
 	docker exec -it postgres14.4 createdb --username=root --owner=root simple_bank
 
-.PHONY: postgres createdb dropdb migrateup migratedown sqlc test
+.PHONY: postgres createdb dropdb migrateup migratedown sqlc test server
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=12/1024=1%, Rehash=0, Collisions=0/29=0%
+# Load=13/1024=1%, Rehash=0, Collisions=0/31=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 22 / storage = 154 B / avg = 7 B
-# current buf: size = 8174 B / used = 154 B / count = 22 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 25 / storage = 173 B / avg = 6 B
+# current buf: size = 8174 B / used = 173 B / count = 25 / avg = 6 B
 
-# strcache performance: lookups = 41 / hit rate = 46%
+# strcache performance: lookups = 46 / hit rate = 45%
 # hash-table stats:
-# Load=22/8192=0%, Rehash=0, Collisions=0/41=0%
-# Finished Make data base on Tue Jun 28 23:11:16 2022
+# Load=25/8192=0%, Rehash=0, Collisions=0/46=0%
+# Finished Make data base on Thu Jun 30 21:06:28 2022
 
  
