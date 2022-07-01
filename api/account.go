@@ -1,11 +1,11 @@
 package api
 
 import (
-	db "bank/db/sqlc"
 	"database/sql"
 	"fmt"
 	"net/http"
 
+	db "github.com/M1racle-Heen/simplebank/db/sqlc"
 	"github.com/gin-gonic/gin"
 	_ "github.com/lib/pq"
 )

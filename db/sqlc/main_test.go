@@ -1,12 +1,12 @@
 package db
 
 import (
-	"bank/util"
 	"database/sql"
 	"log"
 	"os"
 	"testing"
 
+	"github.com/M1racle-Heen/simplebank/util"
 	_ "github.com/lib/pq"
 )
 

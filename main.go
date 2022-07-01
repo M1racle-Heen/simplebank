@@ -1,12 +1,12 @@
 package main
 
 import (
-	"bank/api"
-	db "bank/db/sqlc"
-	"bank/util"
 	"database/sql"
 	"log"
 
+	"github.com/M1racle-Heen/simplebank/api"
+	db "github.com/M1racle-Heen/simplebank/db/sqlc"
+	"github.com/M1racle-Heen/simplebank/util"
 	_ "github.com/lib/pq"
 )
 
