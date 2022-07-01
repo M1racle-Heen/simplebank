@@ -3,20 +3,20 @@ package main
 import (
 	"bank/api"
 	db "bank/db/sqlc"
+	"bank/util"
 	"database/sql"
 	"log"
 
 	_ "github.com/lib/pq"
 )
 
-const (
-	serverAddress = "0.0.0.0:9999"
-	dbDriver      = "postgres"
-	dbSource      = "postgresql://root:secret@localhost:5433/simple_bank?sslmode=disable"
-)
-
 func main() {
-	conn, err := sql.Open(dbDriver, dbSource)
+	config, err := util.LoadConfig(".")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	conn, err := sql.Open(config.DBDriver, config.DBSourse)
 	if err != nil {
 		log.Fatal("cannot connect to Db: ", err)
 	}
@@ -24,7 +24,7 @@ func main() {
 	store := db.NewStore(conn)
 	server := api.NewServer(store)
 
-	err = server.Start(serverAddress)
+	err = server.Start(config.ServerAddress)
 	if err != nil {
 		log.Fatal("Cannot start server: ", err)
 	}
