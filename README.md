@@ -100,5 +100,5 @@ Clone the project to the server directory:
     ```
 ## How to test
 
-You can download the great tool [Postman](https://www.postman.com/)
+You can download the great tool [Postman](https://www.postman.com/).
 To test methods from App
