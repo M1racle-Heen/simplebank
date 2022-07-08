@@ -1,7 +1,7 @@
 # simplebank
 
 ## Simple bank service
-The service that we’re going to build is a simple bank. It will provide APIs for the frontend to do following things:
+This project is a simple bank. It will provide APIs for the front end to do the following:
 
 1. Create and manage bank accounts, which are composed of owner’s name, balance, and currency.
 2. Record all balance changes to each of the account. So every time some money is added to or subtracted from the account, an account entry record will be created.
