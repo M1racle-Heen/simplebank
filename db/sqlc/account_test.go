@@ -86,7 +86,7 @@ func TestListAccounts(t *testing.T) {
 	}
 
 	arg := ListAccountsParams{
-		// Owner:  lastAccount.Owner,
+		Owner:  lastAccount.Owner,
 		Limit:  5,
 		Offset: 0,
 	}
@@ -98,7 +98,6 @@ func TestListAccounts(t *testing.T) {
 	for _, account := range accounts {
 		require.NotEmpty(t, account)
 		require.NotEqual(t, lastAccount.Owner, nil)
-		// require.Equal(t, lastAccount.Owner, account.Owner)
-
+		require.Equal(t, lastAccount.Owner, account.Owner)
 	}
 }

@@ -8,7 +8,6 @@ import (
 	db "github.com/M1racle-Heen/simplebank/db/sqlc"
 	"github.com/M1racle-Heen/simplebank/util"
 	"github.com/gin-gonic/gin"
-	_ "github.com/lib/pq"
 	"github.com/stretchr/testify/require"
 )
 
